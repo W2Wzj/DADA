@@ -2,7 +2,7 @@
 
 ## Introduction
 Source-Free Universal Domain Adaptation (UniDA) aims to transfer knowledge from a source domain to a target domain without access to the source data nor prior knowledge about the category shift between domains.
-In this paper, we propose IBA (Identify Before Adaptation), a novel source-free domain adaptation framework that explicitly identifies both source-private and target-private signals before model adaptation. IBA employs a two-stage process: first, it uses prior class probability distributions to differentiate between source- and target-private information; second, it introduces two specialized loss functions that encourage the separation of known and unknown samples within the target domain. Extensive experiments on various UniDA benchmarks show that IBA outperforms existing methods, delivering superior adaptation performance across diverse scenarios.
+In this paper, we propose IBA (Identify Before Adaptation), a novel source-free domain adaptation framework that explicitly identifies both source-private and target-private signals before model adaptation. IBA employs a two-stage process: first, it uses prior class probability distributions to differentiate between source- and target-private information; second, it introduces two specialized loss functions that encourage the separation of known and unknown samples within the target domain.
 
 ## Framework
 ![alt text](image.png)
