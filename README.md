@@ -7,7 +7,7 @@ In this paper, we propose IBA (Identify Before Adaptation), a novel source-free 
 ## Framework
 ![alt text](image.png)
 ## Prerequisites
-- python3, pytorch, numpy, PIL, scipy, sklearn, tqdm, etc.
+- python3, pytorch, numpy, scipy, sklearn, tqdm, etc.
 - We have presented the our conda environment file in `./environment.yml`.
 
 ## Dataset
