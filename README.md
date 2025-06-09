@@ -16,7 +16,7 @@ We conduct extensive experiments on three standard domain adaptation benchmarks:
 - OfficeHome
 - VisDA
 
-Please manually download these datasets from the official websites and unzip them to the `./data` folder. We have included as supplementary the Office dataset (only Amazon and Webcam available due to submission size constraints).
+Please manually download these datasets from the official websites and unzip them to the `./data` folder. We have included as supplementary the Office dataset (only Amazon and Dslr available due to submission size constraints).
 
 The data structure should look like:
 
