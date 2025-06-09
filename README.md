@@ -50,7 +50,7 @@ The code to run AaD, GLC, and LEAD baselines is also available.
 ```
 ├── data/                  # Dataset folder
 ├── figures/               # Framework and result visualizations
-├── scripts/                # Training scripts
+├── scripts/               # Training scripts
 │   ├── train_source_OPDA.sh
 │   ├── train_source_OSDA.sh
 │   ├── train_source_PDA.sh
@@ -80,4 +80,4 @@ The majority of this code has been adapted from the following papers:
 
 
 ## Contact
-- Zhijingwang@std.uestc.edu.cn# IBA-main
+- Zhijingwang@std.uestc.edu.cn
