@@ -1,8 +1,9 @@
-# Enhancing Source-free Universal Domain Adaptation via Private Signal Discovery
+# PIDA: Private Information-guided Source-Free Universal Domain Adaptation
 
 ## Introduction
-Source-Free Universal Domain Adaptation (UniDA) aims to transfer knowledge from a source domain to a target domain without access to the source data nor prior knowledge about the category shift between domains.
-In this paper, we propose IBA (Identify Before Adaptation), a novel source-free domain adaptation framework that explicitly identifies both source-private and target-private signals before model adaptation. IBA employs a two-stage process: first, it uses prior class probability distributions to differentiate between source- and target-private information; second, it introduces two specialized loss functions that encourage the separation of known and unknown samples within the target domain.
+Source-free Universal Domain Adaptation (UniDA) aims to transfer knowledge from a source domain to a target domain without access to the source data or prior knowledge of cross-domain category shifts.
+
+In this paper, we propose Private Information-guided Domain Adaptation (PIDA), a novel source-free framework that explicitly identifies both source-private and target-private information to guide model adaptation. PIDA follows a two-stage process: first, it identifies the private information based on prior class probability distributions to exclude potential private classes; second, to further utilize the identified private information, it introduces two specialized loss functions that enhance the distinction between shared- and private-class samples within the target domain.
 
 ## Framework
 ![alt text](image.png)
@@ -54,9 +55,9 @@ The code to run AaD, GLC, and LEAD baselines is also available.
 │   ├── train_source_OPDA.sh
 │   ├── train_source_OSDA.sh
 │   ├── train_source_PDA.sh
-│   ├── train_target_IBA_OPDA.sh
-│   ├── train_target_IBA_OSDA.sh
-│   └── train_target_IBA_PDA.sh
+│   ├── train_target_PIDA_OPDA.sh
+│   ├── train_target_PIDA_OSDA.sh
+│   └── train_target_PIDA_PDA.sh
 ├── environment.yml       # Conda environment file
 └── README.md
 ```
