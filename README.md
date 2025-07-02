@@ -43,7 +43,7 @@ The data structure should look like:
 # Source Model Preparing
 bash ./scripts/train_source_OPDA.sh
 #Target Model Adaptation
-bash ./scripts/train_target_IBA_OPDA.sh
+bash ./scripts/train_target_PIDA_OPDA.sh
 ```
 The code to run AaD, GLC, and LEAD baselines is also available. 
 
