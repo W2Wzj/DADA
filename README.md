@@ -1,9 +1,12 @@
-# PIDA: Private Information-guided Source-Free Universal Domain Adaptation
+# Double-Boundary Awareness of Shared-Classes for Source-Free Universal Domain Adaptation
 
 ## Introduction
-Source-free Universal Domain Adaptation (UniDA) aims to transfer knowledge from a source domain to a target domain without access to the source data or prior knowledge of cross-domain category shifts.
-
-In this paper, we propose Private Information-guided Domain Adaptation (PIDA), a novel source-free framework that explicitly identifies both source-private and target-private information to guide model adaptation. PIDA follows a two-stage process: first, it identifies the private information based on prior class probability distributions to exclude potential private classes; second, to further utilize the identified private information, it introduces two specialized loss functions that enhance the distinction between shared- and private-class samples within the target domain.
+Source-Free Universal Domain Adaptation (SF-UniDA) aims to adapt a pre-trained source model to an unlabeled target domain without access to source data or prior knowledge of cross-domain category shifts.
+In this paper, we propose Double-boundary Awareness Domain Adaptation (DADA), a category-driven framework that partitions the target domain label space into shared, potential source-private, and target-private categories.
+By labeling target-private samples as unknown and filtering out misassigned source-private samples, DADA enhances the quality of target samples and the reliability of pseudo-labels.
+To achieve this, we propose Double-bounded Shared-classes Refinement (DSR) module, which refines shared classes by identifying both source- and target-private categories based on prior class probabilities and the entropy distribution.
+Additionally, we incorporate Class-Aware Discriminative Learning (CADL) to improve discrimination between shared and target-private samples across domains.
+Extensive experiments conducted on three benchmarks demonstrate that DADA outperforms existing SF-UniDA methods, achieving competitive performance.
 
 ## Framework
 ![alt text](image.png)
@@ -43,7 +46,7 @@ The data structure should look like:
 # Source Model Preparing
 bash ./scripts/train_source_OPDA.sh
 #Target Model Adaptation
-bash ./scripts/train_target_PIDA_OPDA.sh
+bash ./scripts/train_target_DADA_OPDA.sh
 ```
 The code to run AaD, GLC, and LEAD baselines is also available. 
 
@@ -55,9 +58,9 @@ The code to run AaD, GLC, and LEAD baselines is also available.
 │   ├── train_source_OPDA.sh
 │   ├── train_source_OSDA.sh
 │   ├── train_source_PDA.sh
-│   ├── train_target_PIDA_OPDA.sh
-│   ├── train_target_PIDA_OSDA.sh
-│   └── train_target_PIDA_PDA.sh
+│   ├── train_target_DADA_OPDA.sh
+│   ├── train_target_DADA_OSDA.sh
+│   └── train_target_DADA_PDA.sh
 ├── environment.yml       # Conda environment file
 └── README.md
 ```
