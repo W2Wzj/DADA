@@ -3,7 +3,7 @@ import argparse
 
 
 def build_args():
-    parser = argparse.ArgumentParser("This script is used to achieve Universal Domain adaptation for our PIDA paper")
+    parser = argparse.ArgumentParser("This script is used to achieve Universal Domain adaptation for our DADA paper")
 
     parser.add_argument("--dataset", type=str, default="Office", help="VisDA, Office, OfficeHome")
     parser.add_argument("--backbone_arch", type=str, default="resnet50", help="resnet50, resnet101, vgg19")
