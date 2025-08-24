@@ -117,10 +117,11 @@ def obtain_pseudo_label(args, epochs, model, dataloader):
     # calibrate common_class number & known samples
     if args.mode == 'partial-set':    
         known_idx = np.arange(len(all_label))
-        shared_class_pred = (class_counts > args.alpha * (len(known_idx) / args.class_num)).sum().item()  
+        source_pre = (class_counts < (0.5 * (len(known_idx) / args.class_num))).sum().item()  
+        shared_class_pred = args.class_num - source_pre  
     elif args.mode == 'partial': 
-        known_idx = np.where(labels != iidx)[0]
-        shared_class_pred = (class_counts > args.alpha * (len(known_idx) / args.class_num)).sum().item()  
+        source_pre = (class_counts < (0.5 * (len(known_idx) / args.class_num))).sum().item()  
+        shared_class_pred = args.class_num - source_pre  
         
     else: 
         known_idx = np.where(labels != iidx)[0]
