@@ -65,6 +65,19 @@ The code to run AaD, GLC, and LEAD baselines is also available.
 └── README.md
 ```
 
+## Citation
+If this codebase is useful for your work, please cite the following papers:
+'''
+@article{wang2025double,
+  title={Double-boundary awareness of shared categories for source-free universal domain adaptation},
+  author={Wang, Zhijing and Guo, Ji and Sun, Xu and Luo, Yi and Chen, Aiguo},
+  journal={Neurocomputing},
+  pages={131473},
+  year={2025},
+  publisher={Elsevier}
+}
+```
+
 ## Acknowledgements 
 The majority of this code has been adapted from the following papers:
 ```
@@ -80,7 +93,7 @@ The majority of this code has been adapted from the following papers:
   journal={arXiv preprint},
   year={2024}
 }
-```
+‘’‘
 
 
 ## Contact
